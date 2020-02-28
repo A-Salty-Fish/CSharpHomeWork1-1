@@ -1,0 +1,11 @@
+E:\C sharp\ISA\ISA\ISA\bin\Debug\netcoreapp3.1\ISA.exe
+E:\C sharp\ISA\ISA\ISA\bin\Debug\netcoreapp3.1\ISA.deps.json
+E:\C sharp\ISA\ISA\ISA\bin\Debug\netcoreapp3.1\ISA.runtimeconfig.json
+E:\C sharp\ISA\ISA\ISA\bin\Debug\netcoreapp3.1\ISA.runtimeconfig.dev.json
+E:\C sharp\ISA\ISA\ISA\bin\Debug\netcoreapp3.1\ISA.dll
+E:\C sharp\ISA\ISA\ISA\bin\Debug\netcoreapp3.1\ISA.pdb
+E:\C sharp\ISA\ISA\ISA\obj\Debug\netcoreapp3.1\ISA.csprojAssemblyReference.cache
+E:\C sharp\ISA\ISA\ISA\obj\Debug\netcoreapp3.1\ISA.AssemblyInfoInputs.cache
+E:\C sharp\ISA\ISA\ISA\obj\Debug\netcoreapp3.1\ISA.AssemblyInfo.cs
+E:\C sharp\ISA\ISA\ISA\obj\Debug\netcoreapp3.1\ISA.dll
+E:\C sharp\ISA\ISA\ISA\obj\Debug\netcoreapp3.1\ISA.pdb
