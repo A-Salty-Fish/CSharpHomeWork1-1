@@ -83,11 +83,13 @@ namespace Array
         public MyArray(int[] num)
         {
             if (num.Length==0) throw new Exception("Empty Array.");
+            array=new int[num.Length];
             for (int i = 0; i < num.Length; i++)
             {
                 array[i] = num[i];
             }
         }
+
 
         public int Max()
         {

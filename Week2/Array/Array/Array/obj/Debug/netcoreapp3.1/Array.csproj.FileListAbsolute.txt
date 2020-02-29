@@ -1,0 +1,11 @@
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\bin\Debug\netcoreapp3.1\Array.exe
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\bin\Debug\netcoreapp3.1\Array.deps.json
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\bin\Debug\netcoreapp3.1\Array.runtimeconfig.json
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\bin\Debug\netcoreapp3.1\Array.runtimeconfig.dev.json
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\bin\Debug\netcoreapp3.1\Array.dll
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\bin\Debug\netcoreapp3.1\Array.pdb
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\obj\Debug\netcoreapp3.1\Array.csprojAssemblyReference.cache
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\obj\Debug\netcoreapp3.1\Array.AssemblyInfoInputs.cache
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\obj\Debug\netcoreapp3.1\Array.AssemblyInfo.cs
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\obj\Debug\netcoreapp3.1\Array.dll
+E:\C sharp\CSharpHomeWork1-1\Week2\Array\Array\Array\obj\Debug\netcoreapp3.1\Array.pdb

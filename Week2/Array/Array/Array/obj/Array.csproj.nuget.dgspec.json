@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C sharp\\Array\\Array\\Array\\Array.csproj": {}
+    "E:\\C sharp\\CSharpHomeWork1-1\\Week2\\Array\\Array\\Array\\Array.csproj": {}
   },
   "projects": {
-    "E:\\C sharp\\Array\\Array\\Array\\Array.csproj": {
+    "E:\\C sharp\\CSharpHomeWork1-1\\Week2\\Array\\Array\\Array\\Array.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C sharp\\Array\\Array\\Array\\Array.csproj",
+        "projectUniqueName": "E:\\C sharp\\CSharpHomeWork1-1\\Week2\\Array\\Array\\Array\\Array.csproj",
         "projectName": "Array",
-        "projectPath": "E:\\C sharp\\Array\\Array\\Array\\Array.csproj",
+        "projectPath": "E:\\C sharp\\CSharpHomeWork1-1\\Week2\\Array\\Array\\Array\\Array.csproj",
         "packagesPath": "C:\\Users\\dzy\\.nuget\\packages\\",
-        "outputPath": "E:\\C sharp\\Array\\Array\\Array\\obj\\",
+        "outputPath": "E:\\C sharp\\CSharpHomeWork1-1\\Week2\\Array\\Array\\Array\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Microsoft\\Xamarin\\NuGet\\"
