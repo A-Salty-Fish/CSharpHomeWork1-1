@@ -1,0 +1,11 @@
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\bin\Debug\netcoreapp3.1\Shape.exe
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\bin\Debug\netcoreapp3.1\Shape.deps.json
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\bin\Debug\netcoreapp3.1\Shape.runtimeconfig.json
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\bin\Debug\netcoreapp3.1\Shape.runtimeconfig.dev.json
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\bin\Debug\netcoreapp3.1\Shape.dll
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\bin\Debug\netcoreapp3.1\Shape.pdb
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\obj\Debug\netcoreapp3.1\Shape.csprojAssemblyReference.cache
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\obj\Debug\netcoreapp3.1\Shape.AssemblyInfoInputs.cache
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\obj\Debug\netcoreapp3.1\Shape.AssemblyInfo.cs
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\obj\Debug\netcoreapp3.1\Shape.dll
+E:\C sharp\CSharpHomeWork1-1\Week3\Shape\Shape\obj\Debug\netcoreapp3.1\Shape.pdb
