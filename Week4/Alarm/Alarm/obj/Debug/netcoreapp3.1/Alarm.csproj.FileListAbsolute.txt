@@ -1,0 +1,11 @@
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\bin\Debug\netcoreapp3.1\Alarm.exe
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\bin\Debug\netcoreapp3.1\Alarm.deps.json
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\bin\Debug\netcoreapp3.1\Alarm.runtimeconfig.json
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\bin\Debug\netcoreapp3.1\Alarm.runtimeconfig.dev.json
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\bin\Debug\netcoreapp3.1\Alarm.dll
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\bin\Debug\netcoreapp3.1\Alarm.pdb
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\obj\Debug\netcoreapp3.1\Alarm.csprojAssemblyReference.cache
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\obj\Debug\netcoreapp3.1\Alarm.AssemblyInfoInputs.cache
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\obj\Debug\netcoreapp3.1\Alarm.AssemblyInfo.cs
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\obj\Debug\netcoreapp3.1\Alarm.dll
+E:\C sharp\CSharpHomeWork1-1\Week4\Alarm\Alarm\obj\Debug\netcoreapp3.1\Alarm.pdb
