@@ -6,20 +6,6 @@ using System.Text;
 
 namespace OrderManageSystem
 {
-    interface IServiceIO
-    {
-        public abstract void InputOrderItemIO(int i, OrderItem orderItem);
-        public abstract void InputOrderIO(Order order);
-        public abstract void DeleteOrderIO(List<Order> orderlList);
-        public abstract void ModifyOrderIO(List<Order> orderlList);
-        public abstract void ShowAllOrdersIO(List<Order> orderlList);
-        public abstract void ShowOrderIO(Order order, State state);
-        public abstract int SearchBySomeWayIO();
-        public abstract void SearchByOrderNumIO(List<Order> orderList);
-        public abstract void SearchByCustomerName(List<Order> orderList);
-        public abstract int SortBySomeWayIO();
-        public abstract void StartMenu();
-    }
     class CMDServiceIO: IServiceIO //客户端命令行交互接口
     {
         public void InputOrderItemIO(int i,OrderItem orderItem)
@@ -69,65 +55,64 @@ namespace OrderManageSystem
             }
         }
 
-        public void DeleteOrderIO(List<Order> orderlList)
+        public long DeleteOrderIn()
         {
+            Console.ForegroundColor = ConsoleColor.Magenta;
             Console.Write("----------\nPlease enter the Order Num you want to delete:");
             long OrderNum = -1;
-            OrderNum = long.Parse(Console.ReadLine());
-            var result = orderlList.Where(x => x.OrderNum == OrderNum);
-            Order order = result.FirstOrDefault();
-            if (order == null) throw new Exception("Invalid OrderNum\n");
-            else
-            {
-                orderlList.Remove(order);
-                ShowOrderIO(order,State.Delete);
-            }
+            if (!long.TryParse(Console.ReadLine(), out OrderNum)) throw new Exception("Invalid Delete Num input.\n");
+            else return OrderNum;
         }
 
-        public void ModifyOrderIO(List<Order> orderlList)
+        public long ModifyOrderByNumIn()
         {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             long OrderNum = -1;
             Console.Write("----------\nPlease enter the Order Num you want to modify:");
-            OrderNum = long.Parse(Console.ReadLine());
-            var result = orderlList.Where(x => x.OrderNum == OrderNum);
-            Order order = result.FirstOrDefault();
-            if (order == null) throw new Exception("Invalid OrderNum\n");
-            else
-            {
-                Console.Write("----------\nThe Original order:");
-                Console.Write(order);
-                Console.Write("----------\nNow Modify it:\n");
-                order.DeleteItem(); //删除订单项
-                InputOrderIO(order); //输入订单
-                //打印修改后的订单
-                
-            }
+            if (!long.TryParse(Console.ReadLine(), out OrderNum)) throw new Exception("Invalid Modify num input.\n");
+            else return OrderNum;
         }
 
-        public void ShowOrderIO(Order order,State state)
+        public void ShowOrderOut(Order order,ShowWay showWay,int n=0)
         {
-            switch (state)
+            switch (showWay)
             {
-                case State.Add:
+                case ShowWay.Add:
+                    Console.ForegroundColor = ConsoleColor.Green;
                     Console.Write("----------\nYou add the Order:\n");
                     Console.Write(order);
                     break;
-                case State.Delete:
+                case ShowWay.Delete:
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    Console.ForegroundColor = ConsoleColor.DarkBlue;
                     Console.Write("\nYou delete the order:");
                     Console.Write(order);
                     break;
-                case State.Modify:
+                case ShowWay.Modify:
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.Write("----------\nThe Original order:");
+                    Console.Write(order);
+                    break;
+                case ShowWay.Modified:
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
                     Console.Write("----------\nThe Modified order:");
                     Console.Write(order);
                     break;
-                case State.Search:
+                case ShowWay.Search:
+                    Console.ForegroundColor = ConsoleColor.Blue;
                     Console.Write("----------\nThe Search result:");
                     Console.Write(order);
                     break;
+                case ShowWay.Normal:
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    if (n!=0) Console.Write("\nOrder "+n+":\n");//循环输出
+                    Console.Write(order);
+                    break;
+                default:throw new Exception("Invalid Show Input.\n");
             }
         }
 
-        public void ShowAllOrdersIO(List<Order>orderlList)
+        public void ShowAllOrdersOut(List<Order>orderlList)
         {
             Console.ForegroundColor = ConsoleColor.DarkMagenta;
             if (orderlList.Count == 0)//空表
@@ -145,57 +130,51 @@ namespace OrderManageSystem
             }
         }
 
-        public int SearchBySomeWayIO()
+        public SearchWay SearchBySomeWayIO()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.Write("----------\n1 to search by ordernum; 2 to search by name:");
             int input = -1;
-            input = int.Parse(Console.ReadLine());
-            return input;
+            if(!int.TryParse(Console.ReadLine(),out input)) throw new Exception("Invalid SearchWay Input.\n");
+            else
+            {
+                if (input == 1) return SearchWay.ByNum;
+                else if (input == 2) return SearchWay.ByName;
+                else return SearchWay.Undefined;
+            }
+            
         }
 
-        public void SearchByOrderNumIO(List<Order> orderList)
+        public long SearchByOrderNumIO()
         {
             Console.ForegroundColor = ConsoleColor.DarkBlue;
             long OrderNum = -1;
             Console.Write("----------\nPlease enter the Order Num you want to search:");
-            OrderNum = long.Parse(Console.ReadLine());
-            var result = orderList.Where(x => x.OrderNum == OrderNum);
-            Order order = result.FirstOrDefault();
-            if (order != null)
-            {
-                //ShowOrderIO(order,State.Search);
-                Console.Write("----------\nThe Search result:");
-                Console.Write(order);
-            }
-            else throw new Exception("Invalid OrderNum:" + OrderNum + '\n');
+            if (!long.TryParse(Console.ReadLine(), out OrderNum)) throw new Exception("Invalid Num input.\n");
+            else return OrderNum;
         }
 
-        public void SearchByCustomerName(List<Order> orderList)//通过用户名搜索 价格升序
+        public string SearchByCustomerNameIO()//通过用户名搜索 价格升序
         {
-            Console.ForegroundColor = ConsoleColor.DarkBlue;
+            Console.ForegroundColor = ConsoleColor.Blue;
             string CustormerName;
             Console.Write("----------\nPlease enter the Customer Name you want to search:");
             CustormerName = Console.ReadLine();
-            var result = from x in orderList
-                where x.custormer.Name == CustormerName
-                orderby x.OrderNum
-                select x;
-            if (result.FirstOrDefault() != null)
-            {
-                foreach (var x in result)
-                {
-                    Console.Write(x);
-                }
-            }
-            else Console.Write("\nNo result\n");
+            return CustormerName;
         }
 
-        public int SortBySomeWayIO()
+        public SortWay SortBySomeWayIO()//输入函数
         {
             Console.Write("Please enter the way to sort. 1 by orderNum, 2 by data, 3 by sum : ");
             int input = 0;
-            input = int.Parse(Console.ReadLine());
-            return input;
+            if (!int.TryParse(Console.ReadLine(), out input)) throw new Exception("Invalid Sort Input");
+            else
+            {
+                if (input == 1) return SortWay.ByNum;
+                else if (input == 2) return SortWay.ByDate;
+                else if (input == 3) return SortWay.BySum;
+                else return SortWay.Undefined;
+            }
         }
 
         public void StartMenu()

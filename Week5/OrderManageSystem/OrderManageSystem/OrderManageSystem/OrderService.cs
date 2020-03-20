@@ -13,14 +13,46 @@ using System.Text;
 //（5）OrderService提供排序方法对保存的订单进行排序。默认按照订单号排序，也可以使用Lambda表达式进行自定义排序。√
 namespace OrderManageSystem
 {
-    enum State
+    interface IServiceIO//客户端IO接口 In为输入接口 Out为输出接口 IO为输入和输出接口
     {
+        public abstract void InputOrderItemIO(int i, OrderItem orderItem);//添加item的交互
+        public abstract void InputOrderIO(Order order);//添加order的交互
+        public abstract long DeleteOrderIn();//删除order的输入
+        public long ModifyOrderByNumIn();//修改order的输入
+        public abstract void ShowAllOrdersOut(List<Order> orderlList);//展示所有order
+        public abstract void ShowOrderOut(Order order, ShowWay showWay, int n = 0);//展示某个order
+        public abstract SortWay SortBySomeWayIO();//输入搜索方式
+        public abstract SearchWay SearchBySomeWayIO();//搜索order
+        public abstract long SearchByOrderNumIO();//通过订单号搜索
+        public abstract string SearchByCustomerNameIO();//通过用户名搜索
+        public abstract void StartMenu();//开始菜单
+    }
+    enum ShowWay//显示方式
+    {
+        Normal,
         Add,
         Delete,
         Modify,
+        Modified,
         Show,
-        Search
+        Search,
+        Undefined
     };
+
+    enum SearchWay//搜索方式
+    {
+        ByNum,
+        ByName,
+        Undefined
+    }
+
+    enum SortWay//排序方式
+    {
+        ByNum,
+        BySum,
+        ByDate,
+        Undefined
+    }
     class OrderService //订单服务
     {
         private List<Order> orderList;
@@ -55,46 +87,105 @@ namespace OrderManageSystem
             orderList.Add(order);
             //打印订单
             Console.ForegroundColor = ConsoleColor.Red;
-            serviceIo.ShowOrderIO(order,State.Add);
+            serviceIo.ShowOrderOut(order,ShowWay.Add);
         }
 
         public void ModifyOrderByOrderNum()//通过订单号修改订单 不改变订单号与客户
         {
-            serviceIo.ModifyOrderIO(orderList);
+            long OrderNum = serviceIo.ModifyOrderByNumIn();
+            var result = orderList.Where(x => x.OrderNum == OrderNum);
+            Order order = result.FirstOrDefault();
+            if (order == null) throw new Exception("OrderNum not exist\n");
+            else
+            {
+                Order newOrder=new Order();//新建订单
+                serviceIo.ShowOrderOut(order,ShowWay.Modify);
+                order.DeleteItem(); //删除原来的订单
+                serviceIo.InputOrderIO(newOrder); //输入订单
+                orderList.Remove(order);//移除原来的订单
+                orderList.Add(newOrder);//添加订单
+                serviceIo.ShowOrderOut(newOrder,ShowWay.Modified);//输出修改后的订单
+            }
         }
 
         public void DeleteOrderByOrderNum()//通过订单号删除订单
         {
-            serviceIo.DeleteOrderIO(orderList);
+            long OrderNum = serviceIo.DeleteOrderIn();//输入
+            //寻找
+            var result = orderList.Where(x => x.OrderNum == OrderNum);
+            Order order = result.FirstOrDefault();
+            if (order == null) throw new Exception("Invalid OrderNum\n");
+            //删除
+            else
+            {
+                orderList.Remove(order);
+                serviceIo.ShowOrderOut(order, ShowWay.Delete);
+            }
         }
 
-        public void ShowAllOrders()//打印所有的Order
+        public void ShowAllOrders()//显示所有的Order
         {
-            serviceIo.ShowAllOrdersIO(orderList);
+            serviceIo.ShowAllOrdersOut(orderList);
         }
 
         public void SearchBySomeWay()//搜索
         {
-            int input = serviceIo.SearchBySomeWayIO();
+            SearchWay input = serviceIo.SearchBySomeWayIO();
             switch (input)
             {
-                case 1: serviceIo.SearchByOrderNumIO(orderList);break;//通过订单号搜索
-                case 2:serviceIo.SearchByCustomerName(orderList);break;//通过客户名搜索
+                case SearchWay.ByNum: //通过订单号搜索
+                    long OrderNum = serviceIo.SearchByOrderNumIO();
+                    var result1 = orderList.Where(x => x.OrderNum == OrderNum);
+                    Order order = result1.FirstOrDefault();
+                    if (order != null)
+                    {
+                        serviceIo.ShowOrderOut(order,ShowWay.Normal);
+                    }
+                    else throw new Exception("Invalid OrderNum:" + OrderNum + '\n');
+                    break;
+                case SearchWay.ByName://通过客户名搜索
+                    string CustormerName = serviceIo.SearchByCustomerNameIO();
+                    var result2 = from x in orderList
+                        where x.custormer.Name == CustormerName
+                        orderby x.OrderNum
+                        select x;
+                    if (result2.FirstOrDefault() != null)//搜索到了则输出
+                    {
+                        int i = 1;
+                        foreach (var x in result2)
+                        {
+                            serviceIo.ShowOrderOut(x,ShowWay.Normal,i);
+                            i++;
+                        }
+                    }
+                    else throw new Exception("No such name.\n");
+                    break;
             }
-            
         }
+
 
         public void SortBySomeWay() //排序方式
         {
             Console.ForegroundColor = ConsoleColor.DarkGray;
-
-            int input = serviceIo.SortBySomeWayIO();
-            switch (input)
+            if (orderList.Count == 0) throw new Exception("Empty Order.\n");
+            else
             {
-                case 1: orderList.Sort((order1,order2)=>(int)(order1.OrderNum-order2.OrderNum));break;
-                case 2: orderList.Sort((order1, order2) => DateTime.Compare(order1.orderTime, order2.orderTime));break;
-                case 3:orderList.Sort((order1, order2) => order1.TotalSum.CompareTo(order2.TotalSum) ); break;
-                default: throw new Exception("Invalid Input"); 
+                SortWay input = serviceIo.SortBySomeWayIO();
+                switch (input)
+                {
+                    case SortWay.ByNum:
+                        orderList.Sort((order1, order2) => (int) (order1.OrderNum - order2.OrderNum));
+                        break;
+                    case SortWay.ByDate:
+                        orderList.Sort((order1, order2) => DateTime.Compare(order1.orderTime, order2.orderTime));
+                        break;
+                    case SortWay.BySum:
+                        orderList.Sort((order1, order2) => order1.TotalSum.CompareTo(order2.TotalSum));
+                        break;
+                    default: throw new Exception("Invalid Sort Input");
+                }
+                //排序后显示？
+                serviceIo.ShowAllOrdersOut(orderList);
             }
         }
 
