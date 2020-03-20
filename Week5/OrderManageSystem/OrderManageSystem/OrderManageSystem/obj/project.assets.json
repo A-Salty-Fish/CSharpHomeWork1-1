@@ -9,19 +9,19 @@
   },
   "packageFolders": {
     "C:\\Users\\dzy\\.nuget\\packages\\": {},
-    "D:\\Microsoft\\Xamarin\\NuGet": {}
+    "D:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C sharp\\CSharpHomeWork1-1\\Week2\\PrimeNumber\\PrimeNumber\\PrimeNumber\\PrimeNumber.csproj",
-      "projectName": "PrimeNumber",
-      "projectPath": "E:\\C sharp\\CSharpHomeWork1-1\\Week2\\PrimeNumber\\PrimeNumber\\PrimeNumber\\PrimeNumber.csproj",
+      "projectUniqueName": "E:\\C sharp\\CSharpHomeWork1-1\\Week5\\OrderManageSystem\\OrderManageSystem\\OrderManageSystem\\OrderManageSystem.csproj",
+      "projectName": "OrderManageSystem",
+      "projectPath": "E:\\C sharp\\CSharpHomeWork1-1\\Week5\\OrderManageSystem\\OrderManageSystem\\OrderManageSystem\\OrderManageSystem.csproj",
       "packagesPath": "C:\\Users\\dzy\\.nuget\\packages\\",
-      "outputPath": "E:\\C sharp\\CSharpHomeWork1-1\\Week2\\PrimeNumber\\PrimeNumber\\PrimeNumber\\obj\\",
+      "outputPath": "E:\\C sharp\\CSharpHomeWork1-1\\Week5\\OrderManageSystem\\OrderManageSystem\\OrderManageSystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "D:\\Microsoft\\Xamarin\\NuGet"
+        "D:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
         "C:\\Users\\dzy\\AppData\\Roaming\\NuGet\\NuGet.Config",
