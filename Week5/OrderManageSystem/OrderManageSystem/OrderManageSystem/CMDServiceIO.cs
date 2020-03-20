@@ -30,10 +30,11 @@ namespace OrderManageSystem
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Write("----------\nPlease enter the goods" + (i + 1) + "'s name:");
             goodsName = Console.ReadLine();
+            if (goodsName=="") throw new Exception("Invalid goods' name Input.\n");
             Console.Write("Please enter the goods" + (i + 1) + "'s price:");
-            goodsPrice = double.Parse(Console.ReadLine());
+            if (!double.TryParse(Console.ReadLine(), out goodsPrice)) throw new Exception("Invalid goods' price Input.\n");
             Console.Write("Please enter the goods" + (i + 1) + "'s number:");
-            goodsNum = int.Parse(Console.ReadLine());
+            if (!int.TryParse(Console.ReadLine(),out goodsNum)) throw new Exception("Invalid goods' num input.\n");
             orderItem.goods = new Goods(goodsName, goodsPrice, goodsNum);
         }
 
@@ -44,14 +45,14 @@ namespace OrderManageSystem
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("----------\nPlease enter the Custormer's name:");
             customerName = Console.ReadLine();
-            if (customerName == null) throw new Exception("name can't be empty.\n");
+            if (customerName == "") throw new Exception("name can't be empty.\n");
             Custormer custormer = new Custormer(customerName);
             order.custormer = custormer;
             //创建订单项目
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("----------\nPlease enter the order item's num:");
             int orderItemNum = 0;
-            orderItemNum = int.Parse(Console.ReadLine());
+            if(!int.TryParse(Console.ReadLine(),out orderItemNum)) throw new Exception("Invalid Order num input.\n");
             if (orderItemNum < 0) throw new Exception("Num must be positive.\n");
             else
             {
@@ -128,7 +129,7 @@ namespace OrderManageSystem
 
         public void ShowAllOrdersIO(List<Order>orderlList)
         {
-            Console.ForegroundColor = ConsoleColor.DarkRed;
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             if (orderlList.Count == 0)//空表
                 Console.Write("----------\nNone order.\n");
             else//非空则遍历
@@ -203,31 +204,40 @@ namespace OrderManageSystem
             int num = -1;
             while (true)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.Write(
-                    "----------\nPlease enter a number.\n 1 to add;   2 to delete;\n 3 to modify;4 to show all;\n 5 to search; 6 to Sort;\nothers to quit:");
-                num = int.Parse(Console.ReadLine());
-                switch (num)
+                try
                 {
-                    case 1:
-                        orderService.AddOrder();
-                        break;
-                    case 2:
-                        orderService.DeleteOrderByOrderNum();
-                        break;
-                    case 3:
-                        orderService.ModifyOrderByOrderNum();
-                        break;
-                    case 4:
-                        orderService.ShowAllOrders();
-                        break;
-                    case 5:
-                        orderService.SearchBySomeWay();
-                        break;
-                    case 6:
-                        orderService.SortBySomeWay();
-                        break;
-                    default: return;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write(
+                        "----------\nPlease enter a number.\n 1 to add;   2 to delete;\n 3 to modify;4 to show all;\n 5 to search; 6 to Sort;\nothers to quit:");
+                    num = int.Parse(Console.ReadLine());
+                    switch (num)
+                    {
+                        case 1:
+                            orderService.AddOrder();
+                            break;
+                        case 2:
+                            orderService.DeleteOrderByOrderNum();
+                            break;
+                        case 3:
+                            orderService.ModifyOrderByOrderNum();
+                            break;
+                        case 4:
+                            orderService.ShowAllOrders();
+                            break;
+                        case 5:
+                            orderService.SearchBySomeWay();
+                            break;
+                        case 6:
+                            orderService.SortBySomeWay();
+                            break;
+                        default: return;
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.ForegroundColor = ConsoleColor.DarkRed; 
+                    Console.Write("Error:"+e.Message+'\n'); 
+                    continue;
                 }
             }
         }
