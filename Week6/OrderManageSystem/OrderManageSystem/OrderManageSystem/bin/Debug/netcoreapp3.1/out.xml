@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <orderTime>2020-03-27T10:17:03.7298235+08:00</orderTime>
+    <orderItemsList>
+      <OrderItem>
+        <goods>
+          <Price>2</Price>
+          <Num>4</Num>
+          <Name>a</Name>
+        </goods>
+      </OrderItem>
+      <OrderItem>
+        <goods>
+          <Price>3</Price>
+          <Num>5</Num>
+          <Name>b</Name>
+        </goods>
+      </OrderItem>
+      <OrderItem>
+        <goods>
+          <Price>3</Price>
+          <Num>6</Num>
+          <Name>c</Name>
+        </goods>
+      </OrderItem>
+    </orderItemsList>
+    <custormer>
+      <name>dzy</name>
+    </custormer>
+  </Order>
+</ArrayOfOrder>
