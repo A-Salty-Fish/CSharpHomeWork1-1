@@ -58,16 +58,86 @@ namespace OrderManageSystem
         ByDate,
         Undefined
     }
+
+    public class AlgorithmUnit//算法单元
+    {
+        public Order Delete(long OrderNum, List<Order> orderList)
+        {
+            var result = orderList.Where(x => x.OrderNum == OrderNum);
+            Order order = result.FirstOrDefault();
+            if (order == null)
+            {
+                return null; 
+                throw new Exception("Invalid OrderNum\n");}
+            //删除
+            else
+            {
+                orderList.Remove(order);
+                return order;
+            }
+        }
+
+        public Order ModifySearch(long OrderNum, List<Order> orderList)
+        {
+            var result = orderList.Where(x => x.OrderNum == OrderNum);
+            Order order = result.FirstOrDefault();
+            if (order == null) throw new Exception("OrderNum not exist\n");
+            else
+            {
+                return order;
+            }
+        }
+
+        public void ModifyReplace(Order order,Order newOrder,List<Order> orderList)
+        {
+            orderList.Remove(order);//移除原来的订单
+            orderList.Add(newOrder);//添加订单
+        }
+
+        public Order SearchByNum(long OrderNum, List<Order> orderList)
+        {
+            var result1 = orderList.Where(x => x.OrderNum == OrderNum);
+            return result1.FirstOrDefault();
+        }
+        public IOrderedEnumerable<Order> SearchByName(string CustormerName, List<Order> orderList)
+        {
+            var result2 = from x in orderList
+                where x.custormer.Name == CustormerName
+                orderby x.OrderNum
+                select x;
+            return result2;
+        }
+
+        public void Sort(SortWay input,List<Order> orderList)//排序
+        {
+            switch (input)
+            {
+                case SortWay.ByNum:
+                    orderList.Sort((order1, order2) => (int)(order1.OrderNum - order2.OrderNum));
+                    break;
+                case SortWay.ByDate:
+                    orderList.Sort((order1, order2) => DateTime.Compare(order1.orderTime, order2.orderTime));
+                    break;
+                case SortWay.BySum:
+                    orderList.Sort((order1, order2) => order1.TotalSum.CompareTo(order2.TotalSum));
+                    break;
+                default: throw new Exception("Invalid Sort Input");
+            }
+        }
+    }
+
     [Serializable]
     public class OrderService //订单服务
     {
         public List<Order> orderList;
-        public IServiceIO serviceIo;//
+        public IServiceIO serviceIo;//输入输出接口
+        public AlgorithmUnit Unit;//算法单元
 
         public OrderService()
         {
             orderList = new List<Order>();
             serviceIo=new CMDServiceIO();//客户端命令行交互接口
+            Unit=new AlgorithmUnit();
         }
 
         public void StartMenu()
@@ -99,34 +169,23 @@ namespace OrderManageSystem
         public void ModifyOrderByOrderNum()//通过订单号修改订单 不改变订单号与客户
         {
             long OrderNum = serviceIo.ModifyOrderByNumIn();
-            var result = orderList.Where(x => x.OrderNum == OrderNum);
-            Order order = result.FirstOrDefault();
+            Order order = Unit.ModifySearch(OrderNum, orderList);//寻找待修改订单
             if (order == null) throw new Exception("OrderNum not exist\n");
             else
             {
-                Order newOrder=new Order();//新建订单
-                serviceIo.ShowOrderOut(order,ShowWay.Modify);
-                order.DeleteItem(); //删除原来的订单
+                serviceIo.ShowOrderOut(order, ShowWay.Modify); //打印原来的订单
+                Order newOrder = new Order();//新建订单
                 serviceIo.InputOrderIO(newOrder); //输入订单
-                orderList.Remove(order);//移除原来的订单
-                orderList.Add(newOrder);//添加订单
-                serviceIo.ShowOrderOut(newOrder,ShowWay.Modified);//输出修改后的订单
+                Unit.ModifyReplace(order,newOrder,orderList);//新旧替换
+                serviceIo.ShowOrderOut(newOrder, ShowWay.Modified);//输出修改后的订单
             }
         }
 
         public void DeleteOrderByOrderNum()//通过订单号删除订单
         {
             long OrderNum = serviceIo.DeleteOrderIn();//输入
-            //寻找
-            var result = orderList.Where(x => x.OrderNum == OrderNum);
-            Order order = result.FirstOrDefault();
-            if (order == null) throw new Exception("Invalid OrderNum\n");
-            //删除
-            else
-            {
-                orderList.Remove(order);
-                serviceIo.ShowOrderOut(order, ShowWay.Delete);
-            }
+            Order order = Unit.Delete(OrderNum, orderList);//调用算法单元删除订单并返回删除的订单
+            if (order!=null) serviceIo.ShowOrderOut(order, ShowWay.Delete);//打印删除的订单
         }
 
         public void ShowAllOrders()//显示所有的Order
@@ -140,9 +199,8 @@ namespace OrderManageSystem
             switch (input)
             {
                 case SearchWay.ByNum: //通过订单号搜索
-                    long OrderNum = serviceIo.SearchByOrderNumIO();
-                    var result1 = orderList.Where(x => x.OrderNum == OrderNum);
-                    Order order = result1.FirstOrDefault();
+                    long OrderNum = serviceIo.SearchByOrderNumIO();//前端获取订单号输入
+                    Order order = Unit.SearchByNum(OrderNum, orderList);//调用算法单元获得结果
                     if (order != null)
                     {
                         serviceIo.ShowOrderOut(order,ShowWay.Normal);
@@ -150,11 +208,8 @@ namespace OrderManageSystem
                     else throw new Exception("Invalid OrderNum:" + OrderNum + '\n');
                     break;
                 case SearchWay.ByName://通过客户名搜索
-                    string CustormerName = serviceIo.SearchByCustomerNameIO();
-                    var result2 = from x in orderList
-                        where x.custormer.Name == CustormerName
-                        orderby x.OrderNum
-                        select x;
+                    string CustormerName = serviceIo.SearchByCustomerNameIO();//前端获取用户名输入
+                    var result2 = Unit.SearchByName(CustormerName, orderList);//调用算法单元获得结果
                     if (result2.FirstOrDefault() != null)//搜索到了则输出
                     {
                         int i = 1;
@@ -176,19 +231,7 @@ namespace OrderManageSystem
             else
             {
                 SortWay input = serviceIo.SortBySomeWayIO();//调用前端获取输出
-                switch (input)
-                {
-                    case SortWay.ByNum:
-                        orderList.Sort((order1, order2) => (int) (order1.OrderNum - order2.OrderNum));
-                        break;
-                    case SortWay.ByDate:
-                        orderList.Sort((order1, order2) => DateTime.Compare(order1.orderTime, order2.orderTime));
-                        break;
-                    case SortWay.BySum:
-                        orderList.Sort((order1, order2) => order1.TotalSum.CompareTo(order2.TotalSum));
-                        break;
-                    default: throw new Exception("Invalid Sort Input");
-                }
+                Unit.Sort(input, orderList);//调用算法单元排序
                 //排序后显示？
                 serviceIo.ShowAllOrdersOut(orderList);
             }
@@ -220,4 +263,5 @@ namespace OrderManageSystem
             return false;
         }
     }
+
 }

@@ -93,6 +93,7 @@ namespace OrderManageSystem.Tests
         [TestMethod()]
         public void SortBySomeWayTest()
         {
+            AlgorithmUnit unit=new AlgorithmUnit();
             Order order1 = new Order();
             order1.OrderNum = 11111111;
             Order order2 = new Order();
@@ -101,7 +102,7 @@ namespace OrderManageSystem.Tests
             order3.OrderNum = 22222222; 
             List<Order> resultList = new List<Order>() {order1, order3, order2};
             List<Order> orderList = new List<Order>() { order1, order2, order3};
-            orderList.Sort((order1, order2) => (int)(order2.OrderNum - order1.OrderNum));
+            unit.Sort(SortWay.ByNum,orderList);
             CollectionAssert.AreEquivalent(resultList, orderList);
         }
 
