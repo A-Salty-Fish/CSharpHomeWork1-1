@@ -102,7 +102,7 @@ namespace OrderManageSystem
         public IOrderedEnumerable<Order> SearchByName(string CustormerName, List<Order> orderList)
         {
             var result2 = from x in orderList
-                where x.custormer.Name == CustormerName
+                where x.custormer == CustormerName
                 orderby x.OrderNum
                 select x;
             return result2;

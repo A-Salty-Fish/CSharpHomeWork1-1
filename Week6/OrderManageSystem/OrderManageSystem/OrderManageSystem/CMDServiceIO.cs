@@ -21,7 +21,9 @@ namespace OrderManageSystem
             if (!double.TryParse(Console.ReadLine(), out goodsPrice)) throw new Exception("Invalid goods' price Input.\n");
             Console.Write("Please enter the goods" + (i + 1) + "'s number:");
             if (!int.TryParse(Console.ReadLine(),out goodsNum)) throw new Exception("Invalid goods' num input.\n");
-            orderItem.goods = new Goods(goodsName, goodsPrice, goodsNum);
+            orderItem.price = goodsPrice;
+            orderItem.number = goodsNum;
+            orderItem.name = goodsName;
         }
 
         public void InputOrderIO(Order order)
@@ -32,8 +34,7 @@ namespace OrderManageSystem
             Console.Write("----------\nPlease enter the Custormer's name:");
             customerName = Console.ReadLine();
             if (customerName == "") throw new Exception("name can't be empty.\n");
-            Custormer custormer = new Custormer(customerName);
-            order.custormer = custormer;
+            order.custormer = customerName;
             //创建订单项目
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("----------\nPlease enter the order item's num:");

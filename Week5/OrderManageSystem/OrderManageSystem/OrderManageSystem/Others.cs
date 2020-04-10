@@ -6,7 +6,7 @@ namespace OrderManageSystem
 {
     class Custormer//用户
     {
-        private string name;//用户姓名
+        public string name;//用户姓名
 
         public string Name
         {

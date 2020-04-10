@@ -25,8 +25,8 @@ namespace OrderManageSystem
         public override string ToString()
         {
             if (name != null)
-                return "\nCustormer's Name:" + name + '\n';
-            else return "\n";
+                return "\r\nCustormer's Name:" + name + "\r\n";
+            else return "\r\n";
         }
     }
 
@@ -34,8 +34,8 @@ namespace OrderManageSystem
     public class Goods//商品
     {
         public string Name { get; set; }//商品名称
-        public double Price;//商品价格
-        public int Num;//商品数量
+        public double Price { get; set; }//商品价格
+        public int Num { get; set; }//商品数量
 
         public Goods(string name, double price, int num)
         {
@@ -56,14 +56,14 @@ namespace OrderManageSystem
 
         public override string ToString()
         {
-            return "GoodsName:" + Name + "\nGoodPrice:" + Price + "\nGoodsNum:" + Num + "\nTotalSum:" +
-                   TotalPrice + '\n';
+            return "GoodsName:" + Name + "\r\nGoodPrice:" + Price + "\r\nGoodsNum:" + Num + "\r\nTotalSum:" +
+                   TotalPrice + "\r\n";
         }
 
         public override bool Equals(object obj)
         {
-            Goods goods=obj as Goods;
-            return goods!=null && goods.Name == Name;//null
+            Goods goods = obj as Goods;
+            return goods != null && goods.Name == Name;//null
         }
 
         public override int GetHashCode()

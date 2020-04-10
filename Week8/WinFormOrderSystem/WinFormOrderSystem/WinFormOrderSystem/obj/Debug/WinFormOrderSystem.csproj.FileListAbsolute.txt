@@ -1,0 +1,12 @@
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.csprojAssemblyReference.cache
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.Properties.Resources.resources
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.csproj.GenerateResource.cache
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\bin\Debug\WinFormOrderSystem.exe.config
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\bin\Debug\WinFormOrderSystem.exe
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\bin\Debug\WinFormOrderSystem.pdb
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.exe
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.pdb
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.Form1.resources
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.SearchForm.resources
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.AddOrderForm.resources
+E:\C sharp\CSharpHomeWork1-1\Week8\WinFormOrderSystem\WinFormOrderSystem\WinFormOrderSystem\obj\Debug\WinFormOrderSystem.AddItemForm.resources

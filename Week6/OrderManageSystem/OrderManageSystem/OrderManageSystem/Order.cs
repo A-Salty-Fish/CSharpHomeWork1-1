@@ -9,14 +9,16 @@ namespace OrderManageSystem
     [Serializable]
     public class Order:IComparable//订单
     {
-        public Custormer custormer { get; set; }//用户
+        public string custormer { get; set; }//用户
         public long OrderNum { get; set; }//订单号
         public DateTime orderTime;//订单时间
+        public string Time;
         public List<OrderItem> orderItemsList;//订单列表
 
         public Order()
         {
             orderTime=DateTime.Now;
+            Time = orderTime.ToString("yyyy-MM-dd HH:mm:ss");
             orderItemsList = new List<OrderItem>();
             //随机生成8位订单号
             long num = 0;
@@ -38,6 +40,7 @@ namespace OrderManageSystem
             { 
                 orderItemsList.Add(orderItem);
                 orderTime = DateTime.Now;
+                Time = orderTime.ToString("yyyy-MM-dd HH:mm:ss");
             }
             else throw new Exception("Repeat OrderItem\n");
         }
@@ -62,7 +65,7 @@ namespace OrderManageSystem
                 double sum = 0;
                 foreach (OrderItem x in orderItemsList)
                 {
-                    sum += x.Sum();
+                    sum += x.Sum;
                 }
 
                 return sum;
@@ -94,7 +97,7 @@ namespace OrderManageSystem
                 i++;
             }
 
-            return "\nOrder Time:" + orderTime.ToString("yyyy-MM-dd HH:mm:ss") + str + "\nOrderSum:" + TotalSum + '\n';
+            return "\nOrder Time:" + Time + str + "\nOrderSum:" + TotalSum + '\n';
         }
         public override int GetHashCode()
         {
