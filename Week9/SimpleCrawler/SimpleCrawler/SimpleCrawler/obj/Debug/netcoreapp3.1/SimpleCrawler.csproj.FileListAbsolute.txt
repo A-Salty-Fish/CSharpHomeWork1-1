@@ -1,0 +1,11 @@
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\bin\Debug\netcoreapp3.1\SimpleCrawler.exe
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\bin\Debug\netcoreapp3.1\SimpleCrawler.deps.json
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\bin\Debug\netcoreapp3.1\SimpleCrawler.runtimeconfig.json
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\bin\Debug\netcoreapp3.1\SimpleCrawler.runtimeconfig.dev.json
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\bin\Debug\netcoreapp3.1\SimpleCrawler.dll
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\bin\Debug\netcoreapp3.1\SimpleCrawler.pdb
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\obj\Debug\netcoreapp3.1\SimpleCrawler.csprojAssemblyReference.cache
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\obj\Debug\netcoreapp3.1\SimpleCrawler.AssemblyInfoInputs.cache
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\obj\Debug\netcoreapp3.1\SimpleCrawler.AssemblyInfo.cs
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\obj\Debug\netcoreapp3.1\SimpleCrawler.dll
+E:\C sharp\CSharpHomeWork1-1\Week9\SimpleCrawler\SimpleCrawler\SimpleCrawler\obj\Debug\netcoreapp3.1\SimpleCrawler.pdb

@@ -1,0 +1,252 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head id="Head"><title>
+	C++博客 - 专注于C++技术
+</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta id="metaKeywords" name="keywords" content="C++,cppblog,vc,mfc,博客,C++ blog,C++博客" /><link type="text/css" rel="stylesheet" href="/css/common.css" /><link id="MainCss" type="text/css" rel="stylesheet" href="http://www.cppblog.com/AggSite/style.css" /><link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cppblog.com/rss.aspx" /></head>
+<body>
+    <form name="Form1" method="post" action="default.aspx" id="Form1">
+<input type="hidden" name="__VIEWSTATE" id="
+__VIEWSTATE" value="" />
+
+        
+<div id="hd_info">
+        <div id="cnts">
+            <div id="site_nav">
+                « <a href="http://www.cnblogs.com" title="程序员的网上家园">博客园</a> |  <a href="http://www.blogjava.net">Java博客</a> | <a href="https://news.cnblogs.com">IT新闻</a> | <a href="http://kb.cnblogs.com/" title="程序员知识库">知识库</a> | 
+ <a href="http://job.cnblogs.com" title="程序员招聘">招聘</a> | <a href="https://q.cnblogs.com/">博问</a>
+            </div>
+            <div id="login_area">          
+            <span id="span_userinfo"></span>
+            </div>
+            <div class="clear"></div>
+        </div>
+</div>
+
+<div id="header">
+<div id="logo">
+<h1><a id="Header1_TitleLink" href="http://www.cppblog.com/"><img src="images/logo.gif" border="0" /></a></h1>
+</div>
+</div>
+
+
+<div id="main">
+	
+					
+<h2>首页原创精华区最新随笔<a href='http://www.cppblog.com/rss.aspx'>(rss)</a></h2>
+<div id="PagedPosts1_divPagerLink" class="PagerLink"><a href="/GoogleSiteSearch.htm">搜索</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/requireregister.aspx">注册</a>&nbsp;&nbsp;<a id="PagedPosts1_ListTitle2_ListLink" href="/default.html?OnlyTitle=1">仅列出标题</a>&nbsp;&nbsp<!--<a id="PagedPosts1_lnkTitleView" href="homepage.aspx">新闻风格</a>&nbsp;&nbsp;--></div>
+
+<div class="post">
+	<h3><a href="http://www.cppblog.com/eryar/archive/2020/02/29/highlighting.html">OpenCASCADE Customize Highlighting</a></h3><h4>&nbsp;&nbsp;&nbsp;&nbsp; 摘要: OpenCASCADE自定义高亮效果&nbsp;&nbsp;<a href='http://www.cppblog.com/eryar/archive/2020/02/29/highlighting.html'>阅读全文</a><p class="postfoot" align="right">2020-02-29 15:01&nbsp;作者:&nbsp;<a href="http://www.cppblog.com/eryar/" class="clsSubText">eryar</a><a href="http://www.cppblog.com/eryar/archive/2020/02/29/highlighting.html#Feedback" class="CommentLink">【评论:0】</a>【阅读:2258】&nbsp;</p></h4><h3><a href="http://www.cppblog.com/eryar/archive/2020/02/24/qtscriptableapplication.html">Qt Python Scriptable Application </a></h3><h4>&nbsp;&nbsp;&nbsp;&nbsp; 摘要: Abstract. Python and C++ are in many ways as different as two languages could be: while C++ is usually compiled to machine-code, Python is interpreted. Python's dynamic type system is often cited as the foundation of its flexibility, while in C++ static typing is the cornerstone of its efficiency. C++ has an intricate and difficult compile-time meta-language, while in Python, practically everything happens at runtime.<br><br>Key Words. Qt, Python, Shiboken2, PySide2&nbsp;&nbsp;<a href='http://www.cppblog.com/eryar/archive/2020/02/24/qtscriptableapplication.html'>阅读全文</a><p class="postfoot" align="right">2020-02-24 14:56&nbsp;作者:&nbsp;<a href="http://www.cppblog.com/eryar/" class="clsSubText">eryar</a><a href="http://www.cppblog.com/eryar/archive/2020/02/24/qtscriptableapplication.html#Feedback" class="CommentLink">【评论:0】</a>【阅读:1656】&nbsp;</p></h4><h3><a href="http://www.cppblog.com/aqazero/archive/2020/02/07/217109.html">Use Skia in MFC or Win32 application</a></h3><h4>&nbsp;&nbsp;&nbsp;&nbsp; 摘要: What is SkiaSkia is an open source 2D graphics library which provides common APIs that work across a variety of hardware and software platforms. It serves as the graphics engine for Google Chrome ...&nbsp;&nbsp;<a href='http://www.cppblog.com/aqazero/archive/2020/02/07/217109.html'>阅读全文</a><p class="postfoot" align="right">2020-02-07 07:53&nbsp;作者:&nbsp;<a href="http://www.cppblog.com/aqazero/" class="clsSubText">brent</a><a href="http://www.cppblog.com/aqazero/archive/2020/02/07/217109.html#Feedback" class="CommentLink">【评论:0】</a>【阅读:387】&nbsp;</p></h4><h3><a href="http://www.cppblog.com/eryar/archive/2020/01/14/pyside.html">编译PySide</a></h3><h4>&nbsp;&nbsp;&nbsp;&nbsp; 摘要: 编译PySidePySide是跨平台应用程序框架Qt的Python绑定版本。在2009年8月，PySide首次发布。提供和PyQt类似的功能，并相容&nbsp;API。但与&nbsp;PyQt&nbsp;不同处为使用LGPL授权。PySide的推出比pyQt晚很多，但也有些年头了。由于先前PySide项目不是很完善，又缺乏文档，所以其存在感不高。Pyside的诞生主要是Nokia（收购了T...&nbsp;&nbsp;<a href='http://www.cppblog.com/eryar/archive/2020/01/14/pyside.html'>阅读全文</a><p class="postfoot" align="right">2020-01-14 20:48&nbsp;作者:&nbsp;<a href="http://www.cppblog.com/eryar/" class="clsSubText">eryar</a><a href="http://www.cppblog.com/eryar/archive/2020/01/14/pyside.html#Feedback" class="CommentLink">【评论:0】</a>【阅读:1662】&nbsp;</p></h4><h3><a href="http://www.cppblog.com/zdhsoft/archive/2020/01/11/smartgit.html">在Deepin linux下使用smartgit以及破解说明</a></h3><h4>&nbsp;&nbsp;&nbsp;&nbsp; 摘要: smartgit是一个非常好的带完整git flow的git客户端。支持windows, linux，mac。首先到官网下载smartgit包,&nbsp;Debian Bundle的安装版本。在deepin双击默认安装就可以了。&#8203;然后在deepin启动器，最下面，可以找到smartgit,启动它&#8203;然后选择试用30天，我们就可以使用了，我这里使用的版本是9.1.4版本。在h...&nbsp;&nbsp;<a href='http://www.cppblog.com/zdhsoft/archive/2020/01/11/smartgit.html'>阅读全文</a><p class="postfoot" align="right">2020-01-11 10:45&nbsp;作者:&nbsp;<a href="http://www.cppblog.com/zdhsoft/" class="clsSubText">冬瓜</a><a href="http://www.cppblog.com/zdhsoft/archive/2020/01/11/smartgit.html#Feedback" class="CommentLink">【评论:0】</a>【阅读:421】&nbsp;</p></h4>
+</div>
+<h6>
+<div class="PagerLink">
+</div>
+</h6>
+				
+</div>
+<div id="banner">
+<script type="text/javascript" src="http://partner.googleadservices.com/gampad/google_service.js">
+</script>
+<script type="text/javascript">
+var c_enable_dfp = true;
+if (navigator.userAgent.indexOf("Chrome/6.0.401.1") > 0) {
+c_enable_dfp = false;
+}
+if (c_enable_dfp) {
+try{
+  GS_googleAddAdSenseService("ca-pub-4210569241504288");
+  GS_googleEnableAllServices();
+  } catch (e) { }
+ }
+</script>
+<script type="text/javascript">
+if (c_enable_dfp) {
+try{
+  GA_googleAddSlot("ca-pub-4210569241504288", "cppblog_home_top_banner");
+  GA_googleAddSlot("ca-pub-4210569241504288", "cppblog_home_left");
+  } catch (e) { }
+}
+</script>
+<script type="text/javascript">
+if (c_enable_dfp) {
+try{
+  GA_googleFetchAds();
+  } catch (e) { }
+}
+</script>
+<script type="text/javascript">
+if (c_enable_dfp) {
+try{
+  GA_googleFillSlot("cppblog_home_top_banner");
+  } catch (e) { }
+}
+</script>
+</div>
+<div id="authors">
+	
+		
+<h2>技 术 改 变 世 界<!--首页原创精华区--></h2>
+<ul class="NavLink" style="color:gray">
+	<li class="NavLinkli">
+		<a id="SiteNavigate1_RegisterLink" href="RequireRegister.aspx">申请注册</a>
+		- - - -  -&nbsp;
+		<a id="SiteNavigate1_AdminLink" href="http://www.cnblogs.com/ContactUs.aspx">联系我们</a>
+	</li>
+	<li class="NavLinkli">
+		<a href="/GoogleSiteSearch.htm">站内搜索</a>
+		- - - -  -&nbsp;
+		<a href="http://www.cnblogs.com/about/ad.aspx">联系广告</a>
+	</li>
+	<li class="NavLinkli">
+	<a id="SiteNavigate1_TopReadLink" href="TopPosts.aspx">排行榜</a>
+	- - - - - - -
+	<a id="SiteNavigate1_NewPost" href="EnterMyBlog.aspx?NewPost=1">写博客</a>		
+	</li>
+	<!--<li class="NavLinkli">
+		<a href="http://www.cnblogs.com/dudu/articles/52480.aspx">使用帮助</a>- - - - - - <a id="SiteNavigate1_lnkLogin" href="http://www.cppblog.com/login.aspx?ReturnURL=/">登录</a>
+	</li>
+	-->
+	<li class="NavLinkli" style="text-align:center">
+		<a id="SiteNavigate1_EnterMyBlogLink" href="EnterMyBlog.aspx">==》进入我的博客《==</a>
+	</li>	
+</ul>
+
+		
+<H2>网站分类</H2>
+
+		<ul class="NavLink">
+	
+		<li>
+			<a id="SiteCatalog1_LinkList_ctl01_RssLink" href="http://www.cppblog.com/rss.aspx">(rss)</a>
+			<a id="SiteCatalog1_LinkList_ctl01_Link" href="http://www.cppblog.com/">首页原创精华区(0)</a>
+		</li>
+	
+		<li>
+			<a id="SiteCatalog1_LinkList_ctl02_RssLink" href="http://www.cppblog.com/rss.aspx?id=-2">(rss)</a>
+			<a id="SiteCatalog1_LinkList_ctl02_Link" href="http://www.cppblog.com/default.html?id=-2">非技术区(0)</a>
+		</li>
+	
+		<li>
+			<a id="SiteCatalog1_LinkList_ctl03_RssLink" href="http://www.cppblog.com/rss.aspx?id=-5">(rss)</a>
+			<a id="SiteCatalog1_LinkList_ctl03_Link" href="http://www.cppblog.com/default.html?id=-5">新手区(0)</a>
+		</li>
+	
+		<li>
+			<a id="SiteCatalog1_LinkList_ctl04_RssLink" href="http://www.cppblog.com/rss.aspx?id=-3">(rss)</a>
+			<a id="SiteCatalog1_LinkList_ctl04_Link" href="http://www.cppblog.com/default.html?id=-3">其他技术区(0)</a>
+		</li>
+	
+		<li>
+			<a id="SiteCatalog1_LinkList_ctl05_RssLink" href="http://www.cppblog.com/rss.aspx?id=-12">(rss)</a>
+			<a id="SiteCatalog1_LinkList_ctl05_Link" href="http://www.cppblog.com/default.html?id=-12">招聘区(0)</a>
+		</li>
+	
+		<li>
+			<a id="SiteCatalog1_LinkList_ctl06_RssLink" href="http://www.cppblog.com/rss.aspx?id=-18">(rss)</a>
+			<a id="SiteCatalog1_LinkList_ctl06_Link" href="http://www.cppblog.com/default.html?id=-18">所有随笔(0)</a>
+		</li>
+	
+		<li>
+			<a id="SiteCatalog1_LinkList_ctl07_RssLink" href="http://www.cppblog.com/rss.aspx?id=-11">(rss)</a>
+			<a id="SiteCatalog1_LinkList_ctl07_Link" href="http://www.cppblog.com/default.html?id=-11">最新评论(0)</a>
+		</li>
+	
+		</ul>
+	
+
+		<span id="span_userinfo2"><script type="text/javascript" src="/GetLoginInfo.aspx" ></script></span>
+		<script type="text/javascript">
+		 document.getElementById("span_userinfo").innerHTML = document.getElementById("span_userinfo2").innerHTML;
+		 document.getElementById("span_userinfo2").innerHTML = '';
+		 </script> 
+		
+		 
+		
+<h2>统计信息</h2>
+<ul>
+	<li>
+		博客 - <div id="aggstats">
+		8617
+		</div>
+	</li>
+	<li>
+		随笔 - <div id="aggstats">
+		65520
+		</div>
+	</li>
+	<li>
+		文章 - <div id="aggstats">
+		11480
+		</div>
+	</li>
+	<li>
+		评论 - <div id="aggstats">
+		69458
+		</div>
+	</li>
+	<!--<li>
+		<a id="AggStats1_PingtrackCount" class="TrackBackLink" href="default.aspx?id=-12">8</a>-->
+	</li>
+</ul>
+
+		
+<h2>聚合</h2>
+<ul>
+	<li>
+		<a href="/rss.aspx">RSS(首页)</a>
+	</li>
+	<li>
+		<a id="Syndication1_OpmlLink" href="Opml.aspx">OPML (博客列表)</a>
+	</li>
+	<li>
+		<a id="Syndication1_CalalogOpmlLink" href="CatalogOpml.aspx">OPML (网站分类)</a>
+	</li>
+</ul>
+<h2>Blog客户端API</h2>
+<ul>
+	<li><a href="http://dudu.cnblogs.com/articles/411388.html">MetaWeblog</a></li>
+</ul>
+<h2>推荐客户端</h2>
+<ul>
+	<li><a href="http://www.cnblogs.com/dudu/articles/495718.html">Windows Live Writer</a></li>
+</ul>
+
+		
+<h2>博客排行榜<font style="FONT-SIZE:11px">[前28人]</font></h2>
+<ul>
+	<li><small>1.&nbsp;</small><a href="http://www.cppblog.com/eryar/">eryar</a>&nbsp;<a href="http://www.cppblog.com/eryar/rss.aspx" class="BlogRss">(rss)</a><br><small>(434,02-29 15:01,1020722)</small></li><li><small>2.&nbsp;</small><a href="http://www.cppblog.com/zhangyq/">Benjamin</a>&nbsp;<a href="http://www.cppblog.com/zhangyq/rss.aspx" class="BlogRss">(rss)</a><br><small>(262,03-31 19:47,546803)</small></li><li><small>3.&nbsp;</small><a href="http://www.cppblog.com/guijie/">杰哥</a>&nbsp;<a href="http://www.cppblog.com/guijie/rss.aspx" class="BlogRss">(rss)</a><br><small>(428,04-01 21:37,451254)</small></li><li><small>4.&nbsp;</small><a href="http://www.cppblog.com/jinq0123/">金庆</a>&nbsp;<a href="http://www.cppblog.com/jinq0123/rss.aspx" class="BlogRss">(rss)</a><br><small>(370,04-17 09:51,446655)</small></li><li><small>5.&nbsp;</small><a href="http://www.cppblog.com/aaxron/">天下</a>&nbsp;<a href="http://www.cppblog.com/aaxron/rss.aspx" class="BlogRss">(rss)</a><br><small>(327,02-20 16:07,376981)</small></li><li><small>6.&nbsp;</small><a href="http://www.cppblog.com/zdhsoft/">冬瓜</a>&nbsp;<a href="http://www.cppblog.com/zdhsoft/rss.aspx" class="BlogRss">(rss)</a><br><small>(163,02-24 13:26,376753)</small></li><li><small>7.&nbsp;</small><a href="http://www.cppblog.com/Streamlet/">溪流</a>&nbsp;<a href="http://www.cppblog.com/Streamlet/rss.aspx" class="BlogRss">(rss)</a><br><small>(85,01-17 15:54,333711)</small></li><li><small>8.&nbsp;</small><a href="http://www.cppblog.com/aqazero/">brent</a>&nbsp;<a href="http://www.cppblog.com/aqazero/rss.aspx" class="BlogRss">(rss)</a><br><small>(127,02-12 08:34,319604)</small></li><li><small>9.&nbsp;</small><a href="http://www.cppblog.com/qinqing1984/">春秋十二月</a>&nbsp;<a href="http://www.cppblog.com/qinqing1984/rss.aspx" class="BlogRss">(rss)</a><br><small>(95,11-25 12:20,284318)</small></li><li><small>10.&nbsp;</small><a href="http://www.cppblog.com/merlinfang/">merlinfang</a>&nbsp;<a href="http://www.cppblog.com/merlinfang/rss.aspx" class="BlogRss">(rss)</a><br><small>(78,01-05 23:43,261266)</small></li><li><small>11.&nbsp;</small><a href="http://www.cppblog.com/jack-wang/">小王</a>&nbsp;<a href="http://www.cppblog.com/jack-wang/rss.aspx" class="BlogRss">(rss)</a><br><small>(239,04-13 13:54,192462)</small></li><li><small>12.&nbsp;</small><a href="http://www.cppblog.com/Chipset/">Chipset</a>&nbsp;<a href="http://www.cppblog.com/Chipset/rss.aspx" class="BlogRss">(rss)</a><br><small>(66,04-06 11:13,144550)</small></li><li><small>13.&nbsp;</small><a href="http://www.cppblog.com/wicbnu/">未央</a>&nbsp;<a href="http://www.cppblog.com/wicbnu/rss.aspx" class="BlogRss">(rss)</a><br><small>(77,01-17 11:56,143257)</small></li><li><small>14.&nbsp;</small><a href="http://www.cppblog.com/kenkao/">思月行云</a>&nbsp;<a href="http://www.cppblog.com/kenkao/rss.aspx" class="BlogRss">(rss)</a><br><small>(213,03-12 16:30,110425)</small></li><li><small>15.&nbsp;</small><a href="http://www.cppblog.com/flyindark/">的笔记</a>&nbsp;<a href="http://www.cppblog.com/flyindark/rss.aspx" class="BlogRss">(rss)</a><br><small>(103,02-16 11:28,95334)</small></li><li><small>16.&nbsp;</small><a href="http://www.cppblog.com/hkingSP/">宋鹏</a>&nbsp;<a href="http://www.cppblog.com/hkingSP/rss.aspx" class="BlogRss">(rss)</a><br><small>(52,04-05 10:52,59716)</small></li><li><small>17.&nbsp;</small><a href="http://www.cppblog.com/reborntercel/">再生的雄鹰</a>&nbsp;<a href="http://www.cppblog.com/reborntercel/rss.aspx" class="BlogRss">(rss)</a><br><small>(10,02-07 23:07,52354)</small></li><li><small>18.&nbsp;</small><a href="http://www.cppblog.com/jackyxinli/">jacky_zz</a>&nbsp;<a href="http://www.cppblog.com/jackyxinli/rss.aspx" class="BlogRss">(rss)</a><br><small>(30,11-28 11:11,50600)</small></li><li><small>19.&nbsp;</small><a href="http://www.cppblog.com/wythern/">wythern</a>&nbsp;<a href="http://www.cppblog.com/wythern/rss.aspx" class="BlogRss">(rss)</a><br><small>(53,02-26 15:17,49520)</small></li><li><small>20.&nbsp;</small><a href="http://www.cppblog.com/crhackos/">CrHackOS</a>&nbsp;<a href="http://www.cppblog.com/crhackos/rss.aspx" class="BlogRss">(rss)</a><br><small>(13,01-23 15:05,35887)</small></li><li><small>21.&nbsp;</small><a href="http://www.cppblog.com/markqian86/">长戟十三千</a>&nbsp;<a href="http://www.cppblog.com/markqian86/rss.aspx" class="BlogRss">(rss)</a><br><small>(97,04-02 15:54,30929)</small></li><li><small>22.&nbsp;</small><a href="http://www.cppblog.com/wangkang2009/">wangkang</a>&nbsp;<a href="http://www.cppblog.com/wangkang2009/rss.aspx" class="BlogRss">(rss)</a><br><small>(20,11-10 15:38,23892)</small></li><li><small>23.&nbsp;</small><a href="http://www.cppblog.com/dudu/">dudu</a>&nbsp;<a href="http://www.cppblog.com/dudu/rss.aspx" class="BlogRss">(rss)</a><br><small>(15,04-16 09:41,16004)</small></li><li><small>24.&nbsp;</small><a href="http://www.cppblog.com/flipcode/">flipcode</a>&nbsp;<a href="http://www.cppblog.com/flipcode/rss.aspx" class="BlogRss">(rss)</a><br><small>(71,04-03 11:17,13254)</small></li><li><small>25.&nbsp;</small><a href="http://www.cppblog.com/acrux1985/">杜仲当归</a>&nbsp;<a href="http://www.cppblog.com/acrux1985/rss.aspx" class="BlogRss">(rss)</a><br><small>(13,03-17 18:55,3912)</small></li><li><small>26.&nbsp;</small><a href="http://www.cppblog.com/jpweiyi/">LSH</a>&nbsp;<a href="http://www.cppblog.com/jpweiyi/rss.aspx" class="BlogRss">(rss)</a><br><small>(18,12-09 23:34,2706)</small></li><li><small>27.&nbsp;</small><a href="http://www.cppblog.com/Achilles/">Achilles</a>&nbsp;<a href="http://www.cppblog.com/Achilles/rss.aspx" class="BlogRss">(rss)</a><br><small>(4,01-31 18:04,334)</small></li><li><small>28.&nbsp;</small><a href="http://www.cppblog.com/hcu5555/">雨幽轩主</a>&nbsp;<a href="http://www.cppblog.com/hcu5555/rss.aspx" class="BlogRss">(rss)</a><br><small>(2,03-02 16:56,131)</small></li>
+<li>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="../AllBloggers.aspx">更多博客</a>
+</li>
+</ul>
+
+	
+</div>
+<div id="footer">
+	
+	<div style="text-align:left;margin-left:230px;"><a href="http://job.cnblogs.com/">程序员招聘</a>&nbsp;&nbsp;<a href="http://www.cnblogs.com/cate/all/">博客园最新博文</a>&nbsp;&nbsp;<a href="http://q.cnblogs.com">博问</a></div>
+	
+<a href="http://www.miibeian.gov.cn">沪ICP备09004260号</a>&nbsp;&nbsp;&nbsp;&nbsp;
+&#169;
+2020&nbsp;<a id="Footer1_lnkSite" href="http://www.cppblog.com/">C++博客</a>. 
+版权所有. 保留所有权利 
+</div>
+
+
+
+    
+    </form>
+	<script type="text/javascript" src="/script/ShowHidden.js"></script>   
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-476124-5']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</body>
+</html>
