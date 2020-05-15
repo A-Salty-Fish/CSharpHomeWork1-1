@@ -1,0 +1,9 @@
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\bin\Debug\WinFormMultiCrawler.exe.config
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\bin\Debug\WinFormMultiCrawler.exe
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\bin\Debug\WinFormMultiCrawler.pdb
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\obj\Debug\WinFormMultiCrawler.csprojAssemblyReference.cache
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\obj\Debug\WinFormMultiCrawler.Form1.resources
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\obj\Debug\WinFormMultiCrawler.Properties.Resources.resources
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\obj\Debug\WinFormMultiCrawler.csproj.GenerateResource.cache
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\obj\Debug\WinFormMultiCrawler.exe
+E:\C sharp\CSharpHomeWork1-1\Week10\WinFormMultiCrawler\WinFormMultiCrawler\obj\Debug\WinFormMultiCrawler.pdb
