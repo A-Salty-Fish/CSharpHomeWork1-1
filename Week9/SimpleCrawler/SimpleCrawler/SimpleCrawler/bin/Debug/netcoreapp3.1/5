@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>使用 NDoc 对 asp.net (Web) 项目产生文档的方法 - 拓荒者 - 博客园</title>
     
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=BKtyzabbeYJEVOaELkxmRjHbp7LT-v37GzrU5S24bJk" />
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=KCO3_f2W_TC__-jZ7phSnmoFkQuWMJH2yAgA16eE3eY" />
     <link id="MainCss" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001.min.css?v=vmUk-3Bh8LDsKXwjNHs2GDiFna-ZMTUgOJzjUaXTlPA" />
     
     <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/anothereon001/bundle-anothereon001-mobile.min.css?v=cJiDsI1JAuHHd-OAUWJeyE5JMXXsG4mmuUi2rVmEK1c" />
@@ -19,7 +19,7 @@
     <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/dstang2000/rsd.xml" />
     <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/dstang2000/wlwmanifest.xml" />
     <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
-    <script src="/js/blog-common.min.js?v=wKnarAbt-YO5waLYR80IqCLKpzPpF-s-32JKmKCtJxg"></script>
+    <script src="/js/blog-common.min.js?v=SxXBSOObkBuTv6MBUEVQDUvmusUuaISLM3XNTZGbANk"></script>
     <script>
         var currentBlogId = 9986;
         var currentBlogApp = 'dstang2000';
@@ -98,6 +98,7 @@ KISS：Keeping things that work，Improve systems procedures styles，Start thin
     var allowComments = true, cb_blogId = 9986, cb_blogApp = 'dstang2000', cb_blogUserGuid = 'd796310b-63cf-dd11-9e4d-001cf0cd104b';
     var cb_entryId = 250188, cb_entryCreatedDate = '2005-10-08 12:12', cb_postType = 1; 
     loadViewCount(cb_entryId);
+    loadSideColumnAd();
 </script><a name="!comments"></a>
 <div id="blog-comments-placeholder"></div>
 <script>
@@ -188,7 +189,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
     </li>
     <li>
         
-<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/dstang2000/rss/">
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/dstang2000/rss/">
 订阅</a>
         
 <a id="blog_nav_rss_image" href="https://www.cnblogs.com/dstang2000/rss/">
@@ -210,6 +211,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
             <script>loadBlogNews();</script>
 </div>
 
+<div id="sidebar_ad"></div>
 <div id="blog-sidecolumn"></div>
                     <script>loadBlogSideColumn();</script>
 
@@ -221,8 +223,7 @@ LoadPostCategoriesTags(cb_blogId, cb_entryId);        LoadPostInfoBlock(cb_blogI
 	Powered by: 
 	<br />
 	
-	
-<a href="https://www.cnblogs.com/" id="Footer1_Hyperlink3" style="font-size: 12px; font-family: Verdana">博客园</a>
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
 	<br />
 	Copyright &copy; 2020 拓荒者
 <br /><span id="poweredby">Powered by .NET Core on Kubernetes</span>
